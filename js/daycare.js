@@ -262,7 +262,7 @@ const parent0El = document.getElementById("parent-0");
 const parent1El = document.getElementById("parent-1");
 
 parent0El.addEventListener('click', () => {
-  if (team.length < 6 && daycare.parent0) {
+  if (team.length < 12 && daycare.parent0) {
     // Check if eggsAvailable.amount is greater than 10
     if (daycare.eggsAvailable.amount > 0) {
       // Confirmation message
@@ -289,7 +289,7 @@ parent0El.addEventListener('click', () => {
 });
 
 parent1El.addEventListener('click', () => {
-  if (team.length < 6 && daycare.parent1) {
+  if (team.length < 12 && daycare.parent1) {
     // Check if eggsAvailable.amount is greater than 10
     if (daycare.eggsAvailable.amount > 0) {
       // Confirmation message
@@ -321,7 +321,7 @@ function withdrawSingleEgg() {
     const pokemon = pokemonDatabase.find(p => p.name === daycare.eggsAvailable.species);
 
     // check if there is space in the team array
-    if (team.length < 6) {
+    if (team.length < 12) {
       // generate the egg
       const prngValue = parseFloat(localStorage.getItem("prng"));
       const egg = {
@@ -353,7 +353,7 @@ function withdrawSingleEgg() {
 
 // Function to withdraw eggs until filling the team
 function withdrawEggsUntilTeamFull() {
-  const maxEggsToWithdraw = 6 - team.length;
+  const maxEggsToWithdraw = 12 - team.length;
 
       if (daycare.eggsAvailable.amount > 0 && maxEggsToWithdraw > 0) {
         const eggsToWithdraw = Math.min(daycare.eggsAvailable.amount, maxEggsToWithdraw);
