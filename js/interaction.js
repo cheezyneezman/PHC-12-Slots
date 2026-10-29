@@ -269,7 +269,7 @@ img.addEventListener("click", () => {
 
   team = team.map((member) => {
     if (member.isEgg) {
-      const eggStepsBase = getRandomValue(18, 24);
+      const eggStepsBase = getRandomValue(50, 52);
       const eggStepsBonus = new Date().getDay() === 0 ? Math.round(eggStepsBase * 0.5) : 0; // Apply *1.5 bonus if it's Sunday
       member.eggSteps += eggStepsBase + eggStepsBonus;
     } else {
