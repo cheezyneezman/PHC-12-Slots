@@ -72,9 +72,9 @@ if (!localStorage.getItem("pokedex")) {
   pokedex = JSON.parse(localStorage.getItem("pokedex"));
 }
 
-// Function to generate a random number between 0 and 255
+// Function to generate a random number between 0 and 49
 function generateRandomNumber() {
-  return Math.floor(Math.random() * 256);
+  return Math.floor(Math.random() * 50);
 }
 
 // Function to check if the "prng" value exists in local storage, if not, generate and save it
