@@ -490,6 +490,7 @@ max-height: 96px;
   font-weight: bold;
 }
 
+
 /* Daycare */
 
 .daycare-container {
@@ -497,58 +498,73 @@ max-height: 96px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-	padding-bottom: 5%;
+    gap: 20px;
+    padding-bottom: 5%;
 }
 
-.daycare-team-container, .parents-container, .eggs-container {
-	display: flex;
-    flex-wrap: wrap;
+.daycare-team-container {
+    display: grid;
+    grid-template-columns: repeat(6, 64px);
+    gap: 6px;
+    justify-content: center;
+    align-content: center;
+}
+
+.parents-container, .eggs-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .team-slot, .parent-slot, .egg-slot {
     background-color: white;
-    width: 96px;
-    height: 96px;
-    margin: 10px;
-    text-align: center;
+    width: 64px;
+    height: 64px;
+    margin: 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.team-slot, .parent-sprite, .egg-sprite img {
-	max-width: 96px;
-	max-height: 96px;
+.team-slot .team-sprite,
+.parent-slot .parent-sprite,
+.egg-slot .egg-sprite {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
-
 
 .parent-text, .egg-text {
-  margin-top: 10px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .selected {
-  background-color: lightblue;
+    background-color: lightblue !important;
 }
 
-.parents-container, .eggs-container {
-  flex-direction: column;
+.shiny-bg {
+    background-color: rgb(255, 253, 208) !important;
 }
 
 footer {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
 #fillTeamDaycare, #releaseAll {
-  background-color: #424242;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin: 10px;
-  border-radius: 4px;
+    background-color: #424242;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 4px;
 }
 
 /* Help */ 
