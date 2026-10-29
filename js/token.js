@@ -81,7 +81,7 @@ function exchangeTokens() {
   }
 
   // check if team is not already full
-  if (team.length >= 6) {
+  if (team.length >= 12) {
     window.alert("Your team is already full.");
     return;
   }
