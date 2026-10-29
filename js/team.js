@@ -366,14 +366,7 @@ for (let i = 0; i < team.length; i++) {
   const pokemon = team[i];
 
   // Check if the parent element of the button is the team container
-  if (teamContainer) {
-    let evolvingButton = document.createElement('button');
-    evolvingButton.classList.add('evolving-button');
-    evolvingButton.style.display = 'none';
-    evolvingButton.setAttribute('data-index', i + 1);
-    evolvingButton.innerHTML = 'Evolve';
-    teamContainer.appendChild(evolvingButton);
-  }
+
 
   checkEvolutionConditions(pokemon, i, inventory);
 }
@@ -717,7 +710,3 @@ evolvingButton.forEach(button => {
   });
 });
 
-// Call the checkEvolutionConditions function for each pokemon in the team array
-for (let pokemon of team) {
-  checkEvolutionConditions(pokemon, inventory);
-}
