@@ -652,7 +652,7 @@ evolvingButton.forEach(button => {
 
         if (evolvedPokemon.name === 'Ninjask') {
           // Check if there is a free slot in the team
-          if (team.length < 6) {
+          if (team.length < 12) {
             // Create a new Shedinja object and push it to the team array
             const newPokemon = {
               species: 'Shedinja',
