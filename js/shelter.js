@@ -68,7 +68,7 @@ eggBoxes.forEach(eggBox => {
     eggBox.addEventListener('click', () => {
         if (eggBox.claimed) {
             alert("This egg has already been claimed!");
-        } else if (team.length === 6) {
+        } else if (team.length >= 12) {
             alert("Team is full!");
         } else {
             const confirmation = window.confirm(`Do you want to pick up the ${randomPokemon.name} egg? (${randomPokemon.rarity}, ${randomPokemon.egg_steps} steps)`);
